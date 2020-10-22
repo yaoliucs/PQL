@@ -147,7 +147,7 @@ if __name__ == "__main__":
     parser.add_argument("--eval_freq", default=1e4, type=float)  # How often (time steps) we evaluate
     parser.add_argument("--max_timesteps", default=5e5,
                         type=int)  # Max time steps to run environment or train for (this defines buffer size)
-    parser.add_argument("--max_vae_trainstep", default=0, type=int)
+    parser.add_argument("--max_vae_trainstep", default=2e5, type=int)
 
     # BCQ parameter
     parser.add_argument("--batch_size", default=100, type=int)  # Mini batch size for networks
