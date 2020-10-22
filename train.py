@@ -45,7 +45,7 @@ def train_PQL_BEAR(state_dim, action_dim, max_action, device, args):
         test_loss = policy.test_vae(replay_buffer, batch_size=100000)
         beta = np.percentile(test_loss, args.beta_percentile)
         policy.beta = beta
-        hp_setting = f"N{args.load_buffer_size}_phi{args.phi}_n{args.n_action}_cpercentile{args.beta_percentile}"
+        hp_setting = f"N{args.load_buffer_size}_phi{args.phi}_n{args.n_action}_bpercentile{args.beta_percentile}"
         print("Test vae",args.beta_percentile,"percentile:", beta)
     else:
         hp_setting = f"N{args.load_buffer_size}_phi{args.phi}_n{args.n_action}_beta{str(args.beta)}"
@@ -97,7 +97,7 @@ def train_PQL_BCQ(state_dim, action_dim, max_state, max_action, device, args):
         test_loss = policy.test_vae(replay_buffer, batch_size=100000)
         beta = np.percentile(test_loss, args.beta_percentile)
         policy.beta = beta
-        hp_setting = f"N{args.load_buffer_size}_phi{args.phi}_n{args.n_action}_cpercentile{args.beta_percentile}"
+        hp_setting = f"N{args.load_buffer_size}_phi{args.phi}_n{args.n_action}_bpercentile{args.beta_percentile}"
         print("Test vae",args.beta_percentile,"percentile:", beta)
     else:
         hp_setting = f"N{args.load_buffer_size}_phi{args.phi}_n{args.n_action}_beta{str(args.beta)}"
