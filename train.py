@@ -23,7 +23,7 @@ def train_PQL_BEAR(state_dim, action_dim, max_action, device, args):
                        use_kl=(True if args.distance_type == "KL" else False),
                        use_ensemble=(False if args.use_ensemble_variance == "False" else True),
                        kernel_type=args.kernel_type,
-                       use_state_vae=True, actor_lr=args.actor_lr, beta=args.beta,
+                       use_state_filter=True, actor_lr=args.actor_lr, beta=args.beta,
                        n_action=args.n_action, n_action_execute=args.n_action_execute,
                        backup=args.backup, ql_noise=args.ql_noise, vmin=args.vmin
                        )

@@ -16,8 +16,8 @@ python load_dataset.py
 Then please use:
 ```
 python train.py --env=Hopper-v2 --dataset=d4rl-hopper-medium-v0
-python train.py --env=HalfCheetah-v2 --dataset=d4rl-halfcheetah-medium-v0 --qbackup_noise=0.0 
-python train.py --env=Walker2d-v2 --dataset=d4rl-walker2d-medium-v0 --qbackup_noise=0.0 
+python train.py --env=HalfCheetah-v2 --dataset=d4rl-halfcheetah-medium-v0 --ql_noise=0.0 
+python train.py --env=Walker2d-v2 --dataset=d4rl-walker2d-medium-v0 --ql_noise=0.0 
 ``` 
 
 If you use this code in your research, please cite our paper:
